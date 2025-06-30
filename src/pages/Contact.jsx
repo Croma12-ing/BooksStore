@@ -47,7 +47,7 @@ const Contact = () => {
               
               <div className="contact-item">
                 <h3>📞 Phone</h3>
-                <p>(+91)913128447</p>
+                <p>(+91)9131284447</p>
                 <p>Monday - Friday: 9AM - 6PM EST</p>
               </div>
               
