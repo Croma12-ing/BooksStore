@@ -6,9 +6,7 @@ const ShippingPolicy = () => {
             <h1>Shipping & Delivery Policy</h1>
             <div className="policy-content">
                 <div className="policy-section">
-                    <p><strong>Effective Date:</strong> 30 June 2025</p>
-                    <p><strong>Last Updated:</strong> 30 June 2025</p>
-                    <p>At <strong>[Your Store Name]</strong>, we are committed to delivering your favorite books quickly, safely, and affordably. This Shipping & Delivery Policy outlines how your order will be processed and shipped.</p>
+                    <p>At <strong>BookStore</strong>, we are committed to delivering your favorite books quickly, safely, and affordably. This Shipping & Delivery Policy outlines how your order will be processed and shipped.</p>
                 </div>
 
                 <div className="policy-section">
@@ -38,7 +36,7 @@ const ShippingPolicy = () => {
                             <tr>
                                 <td>Standard Shipping</td>
                                 <td>4–7 business days</td>
-                                <td>₹49 (Free over ₹499)</td>
+                                <td> ₹49 (Free over ₹499)</td>
                             </tr>
                             <tr>
                                 <td>Express Shipping</td>
@@ -80,8 +78,8 @@ const ShippingPolicy = () => {
                     <h2>Need Help?</h2>
                     <p>For any queries related to shipping or delivery, feel free to contact us:</p>
                     <ul>
-                        <li><strong>Email:</strong> support@[yourdomain].com</li>
-                        <li><strong>Phone:</strong> +91-XXXXXXXXXX</li>
+                        <li><strong>Email:</strong> support@bookstore.com</li>
+                        <li><strong>Phone:</strong> +91-9131284447</li>
                         <li><strong>Working Hours:</strong> 10 AM to 6 PM (Mon–Sat)</li>
                     </ul>
                 </div>
