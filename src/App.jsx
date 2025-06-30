@@ -1,48 +1,55 @@
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import { CartProvider } from './contexts/CartContext';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import BookDetails from './pages/BookDetails';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import OrderConfirmation from './pages/OrderConfirmation';
+import Login from './components/Login';
+import Register from './components/Register';
+import UserProfile from './components/UserProfile';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import RefundPolicy from './pages/RefundPolicy';
+import TermsConditions from './pages/TermsConditions';
+import ShippingPolicy from './pages/ShippingPolicy';
+import './App.css';
 
-const Footer = () => {
+function App() {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h3>BookStore</h3>
-            <p>Your one-stop destination for books from around the world.</p>
+    <AuthProvider>
+      <CartProvider>
+        <Router>
+          <div className="App">
+            <Header />
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/book/:id" element={<BookDetails />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/order-confirmation" element={<OrderConfirmation />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/profile" element={<UserProfile />} />
+                <Route path="/about" element={<AboutUs />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/refund" element={<RefundPolicy />} />
+                <Route path="/terms" element={<TermsConditions />} />
+                <Route path="/shipping-policy" element={<ShippingPolicy />} />
+              </Routes>
+            </main>
+            <Footer />
           </div>
-          
-          <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Policies</h4>
-            <ul>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/refund">Refund & Cancellation</Link></li>
-              <li><Link to="/terms">Terms & Conditions</Link></li>
-              <li><Link to="/shipping-policy">Shipping & Delivey</Link></li>
-            </ul>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Contact Info</h4>
-            <p>Email: info@bookstore.com</p>
-            <p>Phone: (555) 123-4567</p>
-            <p>Address: 123 Book Street, Reading City</p>
-          </div>
-        </div>
-        
-        <div className="footer-bottom">
-          <p>&copy; 2025 BookStore. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+        </Router>
+      </CartProvider>
+    </AuthProvider>
   );
-};
+}
 
-export default Footer;
+export default App;
