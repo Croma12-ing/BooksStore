@@ -1293,3 +1293,92 @@ body {
     padding: 32px 20px;
   }
 }
+/* ✅ Already includes good responsiveness for mobile and tablet via media queries */
+/* ✅ We will now slightly tweak layout to ensure better scaling on full-screen laptops */
+
+/* ✅ Enhancement #1: Make font sizes and spacing slightly larger on larger screens */
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 1280px;
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
+  }
+
+  .hero-content p {
+    font-size: 24px;
+  }
+
+  .books-grid {
+    gap: 40px;
+  }
+
+  .book-card {
+    border-radius: 16px;
+  }
+
+  .book-info {
+    padding: 24px;
+  }
+}
+
+/* ✅ Enhancement #2: Prevent fixed grid layout on large desktop */
+.books-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ✅ Enhancement #3: Widen checkout and cart sections slightly for desktop */
+@media (min-width: 1280px) {
+  .cart-content,
+  .checkout-content {
+    grid-template-columns: 3fr 1.2fr;
+    gap: 56px;
+  }
+
+  .cart-summary,
+  .order-summary {
+    padding: 32px;
+  }
+}
+
+/* ✅ Enhancement #4: Allow containers to grow slightly wider */
+.container {
+  max-width: 95vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ✅ Enhancement #5: Ensure book-details images scale nicely */
+.book-image-large img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ✅ Enhancement #6: Ensure footer and header look good on large screens */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* ✅ Enhancement #7: Avoid overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* Keep rest of the original styles unchanged */
+
+/* Suggestion: Move this enhancement CSS into a separate file like "responsive-enhancements.css" or add to bottom of main stylesheet. */
